@@ -1,0 +1,153 @@
+    1  apt get upgrade -y
+    2  apt upgrade -y
+    3  apkg --configure -a
+    4  apt update -y
+    5  sudo apt upgrade
+    6  apt install dpkg
+    7  dpkg --configure -a
+    8  sudo apt upgrade
+    9  sudo apt install wget
+   10  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+   11  sudo dpkg -i google-chrome-stable_current_amd64.deb
+   12  sudo apt install git
+   13  sudo apt update
+   14  sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
+   15  wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+   16  echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+   17  sudo apt update
+   18  sudo apt install vagrant
+   19  sudo apt update
+   20  sudo apt upgrade
+   21  sudo apt install virtualbox
+   22  vagrant --versin
+   23  vagrant --version
+   24  git clone https://github.com/vsknalli/senthil-vagrant-setups.git
+   25  pwd
+   26  ll
+   27  cd senthil-vagrant-setups/
+   28  ll
+   29  ls 
+   30  cat all_kubernetesnodes.sh 
+   31  cd ~
+   32  git clone https://github.com/vsknalli/justmeandopensource.git
+   33  cd justmeandopensource/
+   34  ls
+   35  cd vagrant-provisioning/
+   36  ls
+   37  vagrant status
+   38  ls -ial
+   39  vagrant up
+   40  vagrant plugin uninstall vagrant-vbguest
+   41  vagrant plugin install vagrant-vbguest --plugin-version 0.21
+   42  config.vm.synced_folder "/tmp", "/vagrant", disabled: 'true'
+   43  config.vm.synced_folder ".", "/vagrant", disabled: true
+   44  mkdir /vagrant
+   45  config.vm.synced_folder ".", "/vagrant", disabled: true
+   46  vi /etc/sudoers
+   47  id vagrant
+   48  useradd vagrant
+   49  passwd vagrant
+   50  vagrant ssh
+   51  sudo apt-get install ifupdown
+   52  vagrant reload
+   53  exit
+   54  vi /etc/sudoers
+   55  systemctl restart sshd
+   56  systemctl restart ssh
+   57  systemctl restart sshd.service
+   58  cat /etc/os-release 
+   59  sudo systemctl restart ssh.service
+   60  vi /etc/sudoers
+   61  sudo systemctl restart ssh.service
+   62  echo "vagrant ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/vagrant
+   63  exit
+   64  ls
+   65  vagrant status
+   66  exit
+   67  echo "vagrant ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/vagrant
+   68  chmod 0440 /etc/sudoers.d/vagrant
+   69  mkdir -pm 700 /home/vagrant/.ssh
+   70  exit
+   71  cd /home/vagrant/
+   72  ls -ial
+   73  chown vagrant:vagrant *
+   74  ls -ial
+   75  chown vagrant:vagrant .ssh
+   76  ls -ial
+   77  chown vagrant:vagrant .
+   78  chown vagrant:vagrant . .
+   79  ls -ial
+   80  chown vagrant:vagrant ..
+   81  ls -ial
+   82  exit
+   83  passwd vagrant/
+   84  passwd vagrant
+   85  exit
+   86  passwd 
+   87  exit
+   88  scp root@192.168.56.101:/etc/kubernetes/admin.conf ~/.kube/config
+   89  exit
+   90  snap install kubectl
+   91  snap install kubectl --classic
+   92  kubectl get nodes
+   93  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   94  exit
+   95  gcloud container clusters get-credentials senthil-cluster --zone us-central1-c --project core-shard-380006
+   96  snap install google-cloud-cli
+   97  snap install google-cloud-cli --classic
+   98  gcloud container clusters get-credentials senthil-cluster --zone us-central1-c --project core-shard-380006
+   99  gcloud auth login
+  100  kubectl get nodes
+  101  kubectl config view
+  102  export KUBECONFIG=/etc/kubernetes/admin.conf
+  103  mv  $HOME/.kube $HOME/.kube.bak
+  104  mkdir $HOME/.kube
+  105  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+  106  exit
+  107  gcloud container clusters get-credentials senthil-cluster --zone us-central1-c --project core-shard-380006
+  108  kubectl get nodes
+  109  which gke-gcloud-auth-plugin
+  110  yum install  gke-gcloud-auth-plugin
+  111  apt install  gke-gcloud-auth-plugin
+  112  sudo apt install google-cloud-sdk-gke-gcloud-auth-plugin -y
+  113  gcloud components install gke-gcloud-auth-plugin
+  114  gcloud components list
+  115  gcloud components install gke-gcloud-auth-plugin
+  116  sudo apt-get remove google-cloud-sdk
+  117  wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-429.0.0-linux-x86_64.tar.gz
+  118  ll
+  119  tar -zxf google-cloud-sdk-*
+  120  curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-429.0.0-linux-x86_64.tar.gz
+  121  ./google-cloud-sdk/install.sh
+  122  ll
+  123  tar =xvf google-cloud-cli-429.0.0-linux-x86_64.tar.gz 
+  124  tar -xvf google-cloud-cli-429.0.0-linux-x86_64.tar.gz 
+  125  ./google-cloud-sdk/install.sh
+  126  gcloud init
+  127  kubectl get nodes
+  128  gcloud init
+  129  gcloud topic
+  130  gcloud login
+  131  gcloud auth login
+  132  core-shard-380006
+  133  gcloud config set core-shard-380006
+  134  gcloud config set project core-shard-380006
+  135  kubectl get nodes
+  136  gcloud components list
+  137  gcloud install components
+  138  gcloud components install gke-gcloud-auth-plugin
+  139  gcloud config set accessibility/screen_reader true
+  140  gcloud auth list
+  141  gcloud config list
+  142  kubectl get nodes
+  143  export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+  144  source ~/.bashrc
+  145  gcloud components update
+  146  gcloud components install gke-gcloud-auth-plugin
+  147  export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+  148  source ~/.bashrc
+  149  kubectl get nodes
+  150  history
+  151  pwd
+  152  ls
+  153  history > one
